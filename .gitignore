@@ -22,3 +22,36 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+# --- Секреты и локальные конфиги ---
+.env
+.env.local
+config.local.yaml
+
+# --- Артефакты сборки и зависимости (Python) ---
+__pycache__/
+*.pyc
+.venv/
+dist/
+
+# --- Логи ---
+*.log
+logs/
+
+# --- IDE / OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# --- Исключение из правила: build/* игнорируем, но build/.gitkeep оставляем.
+# Важно: пишем именно build/*, а не build/ — Git не умеет «вытаскивать»
+# отдельный файл из полностью исключённого каталога.
+build/*
+!build/.gitkeep
+
+# --- Только в корне репозитория ---
+/notes-private.md
+
+# --- Любая вложенность ---
+**/temp
