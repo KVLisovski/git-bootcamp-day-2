@@ -1,0 +1,19 @@
+# ===== GitHub (Personal) =====
+# Пример конфигурации для подключения к личному аккаунту GitHub
+Host github.com
+	# Используем современный алгоритм ключей
+	IdentityFile ~/.ssh/ed25519_github_personal_not_real_key
+	# Запрещаем аутентификацию по паролю (только ключи)
+	PasswordAuthentication no
+	# Имя пользователя для Git-over-SSH (фиксированное)
+	User git
+        # Добавляем ключ в агент
+	AddKeysToAgent yes
+
+# ===== GitHub (Work) — пример для второго аккаунта =====
+# Если нужно разделить личный и рабочий аккаунты
+# Host github-work
+# 	HostName github.com
+# 	IdentityFile ~/.ssh/ed25519_github_work_not_real_too
+# 	User git
+# 	PasswordAuthentication no
